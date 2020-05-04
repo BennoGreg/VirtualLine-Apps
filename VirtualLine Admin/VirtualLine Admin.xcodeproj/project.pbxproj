@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D3427B282460758600E5563F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3427B272460758600E5563F /* GoogleService-Info.plist */; };
 		D3A7B54C246072E500C0247C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7B54B246072E500C0247C /* AppDelegate.swift */; };
 		D3A7B54E246072E500C0247C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7B54D246072E500C0247C /* SceneDelegate.swift */; };
 		D3A7B550246072E500C0247C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7B54F246072E500C0247C /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D3427B272460758600E5563F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3A7B548246072E500C0247C /* VirtualLine Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VirtualLine Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A7B54B246072E500C0247C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3A7B54D246072E500C0247C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		D3A7B54A246072E500C0247C /* VirtualLine Admin */ = {
 			isa = PBXGroup;
 			children = (
+				D3427B272460758600E5563F /* GoogleService-Info.plist */,
 				D3A7B54B246072E500C0247C /* AppDelegate.swift */,
 				D3A7B54D246072E500C0247C /* SceneDelegate.swift */,
 				D3A7B54F246072E500C0247C /* ViewController.swift */,
@@ -129,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3A7B55B246072E700C0247C /* LaunchScreen.storyboard in Resources */,
+				D3427B282460758600E5563F /* GoogleService-Info.plist in Resources */,
 				D3A7B558246072E700C0247C /* Assets.xcassets in Resources */,
 				D3A7B553246072E500C0247C /* Main.storyboard in Resources */,
 			);
