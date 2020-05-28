@@ -3,35 +3,67 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3AA4E3CD4C4BB08ED0687210 /* Pods_VirtualLine_User.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF998E7244F41082DC4C11CC /* Pods_VirtualLine_User.framework */; };
+		7C7B5CA65083EB99DF26BDDB /* Pods_VirtualLine_User.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A50768E5133BD49670A987BF /* Pods_VirtualLine_User.framework */; };
+		852B09F2246FF537004715BD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 852B09F0246FF537004715BD /* Main.storyboard */; };
+		852B09F5246FF63D004715BD /* QueueSectionHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B09F4246FF63D004715BD /* QueueSectionHeader.swift */; };
+		852B09F7246FF7B5004715BD /* QueueCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B09F6246FF7B5004715BD /* QueueCell.swift */; };
+		852B09F9246FF8E9004715BD /* CompanyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B09F8246FF8E9004715BD /* CompanyCell.swift */; };
+		852B09FB247011A5004715BD /* Queue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B09FA247011A5004715BD /* Queue.swift */; };
+		852B09FD2470128B004715BD /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B09FC2470128B004715BD /* Data.swift */; };
+		8532FD842477C0DE00EA3404 /* CurrentQueueDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532FD832477C0DE00EA3404 /* CurrentQueueDetailsViewController.swift */; };
+		8532FD862477C0FE00EA3404 /* CurrentQueueDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8532FD852477C0FE00EA3404 /* CurrentQueueDetailsViewController.storyboard */; };
+		8532FD882477C15A00EA3404 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532FD872477C15A00EA3404 /* CompanyViewController.swift */; };
+		8532FD8A2477C17200EA3404 /* CompanyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8532FD892477C17200EA3404 /* CompanyViewController.storyboard */; };
+		8583DE43246746B600F2A406 /* QRScannerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8583DE42246746B600F2A406 /* QRScannerViewController.storyboard */; };
+		8583DE45246746C800F2A406 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583DE44246746C800F2A406 /* QRScannerViewController.swift */; };
+		8583DE472467475100F2A406 /* UserSettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8583DE462467475100F2A406 /* UserSettingsViewController.storyboard */; };
+		8583DE492467475C00F2A406 /* UserSettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583DE482467475C00F2A406 /* UserSettingsViewController.swift */; };
+		85A1DAD8247AF6DF00D0FFE2 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1DAD7247AF6DF00D0FFE2 /* SettingsCell.swift */; };
+		85A1DADA247AF70A00D0FFE2 /* UserInfoHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1DAD9247AF70A00D0FFE2 /* UserInfoHeader.swift */; };
+		85A1DADC247B064800D0FFE2 /* SettingsSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A1DADB247B064800D0FFE2 /* SettingsSection.swift */; };
 		D3427B2A24607B9B00E5563F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3427B2924607B9B00E5563F /* GoogleService-Info.plist */; };
 		D3A7B56F2460733C00C0247C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7B56E2460733C00C0247C /* AppDelegate.swift */; };
 		D3A7B5712460733C00C0247C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7B5702460733C00C0247C /* SceneDelegate.swift */; };
 		D3A7B5732460733C00C0247C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7B5722460733C00C0247C /* ViewController.swift */; };
-		D3A7B5762460733C00C0247C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A7B5742460733C00C0247C /* Main.storyboard */; };
 		D3A7B5792460733C00C0247C /* VirtualLine_User.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3A7B5772460733C00C0247C /* VirtualLine_User.xcdatamodeld */; };
 		D3A7B57B2460733D00C0247C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A7B57A2460733D00C0247C /* Assets.xcassets */; };
 		D3A7B57E2460733D00C0247C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A7B57C2460733D00C0247C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		3A86A86FEFCF596EA30C5C42 /* Pods-VirtualLine User.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualLine User.release.xcconfig"; path = "Target Support Files/Pods-VirtualLine User/Pods-VirtualLine User.release.xcconfig"; sourceTree = "<group>"; };
-		BF998E7244F41082DC4C11CC /* Pods_VirtualLine_User.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VirtualLine_User.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		74BD7B8DB2D9146B5D4A0920 /* Pods-VirtualLine User.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualLine User.release.xcconfig"; path = "Target Support Files/Pods-VirtualLine User/Pods-VirtualLine User.release.xcconfig"; sourceTree = "<group>"; };
+		852B09F1246FF537004715BD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		852B09F4246FF63D004715BD /* QueueSectionHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueSectionHeader.swift; sourceTree = "<group>"; };
+		852B09F6246FF7B5004715BD /* QueueCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueCell.swift; sourceTree = "<group>"; };
+		852B09F8246FF8E9004715BD /* CompanyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyCell.swift; sourceTree = "<group>"; };
+		852B09FA247011A5004715BD /* Queue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Queue.swift; sourceTree = "<group>"; };
+		852B09FC2470128B004715BD /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		8532FD832477C0DE00EA3404 /* CurrentQueueDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentQueueDetailsViewController.swift; sourceTree = "<group>"; };
+		8532FD852477C0FE00EA3404 /* CurrentQueueDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrentQueueDetailsViewController.storyboard; sourceTree = "<group>"; };
+		8532FD872477C15A00EA3404 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
+		8532FD892477C17200EA3404 /* CompanyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompanyViewController.storyboard; sourceTree = "<group>"; };
+		8583DE42246746B600F2A406 /* QRScannerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScannerViewController.storyboard; sourceTree = "<group>"; };
+		8583DE44246746C800F2A406 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
+		8583DE462467475100F2A406 /* UserSettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserSettingsViewController.storyboard; sourceTree = "<group>"; };
+		8583DE482467475C00F2A406 /* UserSettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettingsViewController.swift; sourceTree = "<group>"; };
+		85A1DAD7247AF6DF00D0FFE2 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		85A1DAD9247AF70A00D0FFE2 /* UserInfoHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoHeader.swift; sourceTree = "<group>"; };
+		85A1DADB247B064800D0FFE2 /* SettingsSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsSection.swift; sourceTree = "<group>"; };
+		A50768E5133BD49670A987BF /* Pods_VirtualLine_User.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VirtualLine_User.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3427B2924607B9B00E5563F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3A7B56B2460733C00C0247C /* VirtualLine User.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VirtualLine User.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A7B56E2460733C00C0247C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3A7B5702460733C00C0247C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D3A7B5722460733C00C0247C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D3A7B5752460733C00C0247C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D3A7B5782460733C00C0247C /* VirtualLine_User.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VirtualLine_User.xcdatamodel; sourceTree = "<group>"; };
 		D3A7B57A2460733D00C0247C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3A7B57D2460733D00C0247C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3A7B57F2460733D00C0247C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DBF168FFFB74F94CA642F429 /* Pods-VirtualLine User.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualLine User.debug.xcconfig"; path = "Target Support Files/Pods-VirtualLine User/Pods-VirtualLine User.debug.xcconfig"; sourceTree = "<group>"; };
+		F48EF4C176D9D1B38F45E679 /* Pods-VirtualLine User.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualLine User.debug.xcconfig"; path = "Target Support Files/Pods-VirtualLine User/Pods-VirtualLine User.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -39,26 +71,87 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AA4E3CD4C4BB08ED0687210 /* Pods_VirtualLine_User.framework in Frameworks */,
+				7C7B5CA65083EB99DF26BDDB /* Pods_VirtualLine_User.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		78F03367481869E1ADC09026 /* Frameworks */ = {
+		4D122DA623DD7E36562A2948 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				BF998E7244F41082DC4C11CC /* Pods_VirtualLine_User.framework */,
+				A50768E5133BD49670A987BF /* Pods_VirtualLine_User.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		852B09F3246FF623004715BD /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				852B09F4246FF63D004715BD /* QueueSectionHeader.swift */,
+				852B09F6246FF7B5004715BD /* QueueCell.swift */,
+				852B09F8246FF8E9004715BD /* CompanyCell.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		8532FD7F2477C03000EA3404 /* Current Queue Details */ = {
+			isa = PBXGroup;
+			children = (
+				8532FD832477C0DE00EA3404 /* CurrentQueueDetailsViewController.swift */,
+				8532FD852477C0FE00EA3404 /* CurrentQueueDetailsViewController.storyboard */,
+			);
+			path = "Current Queue Details";
+			sourceTree = "<group>";
+		};
+		8532FD802477C05900EA3404 /* Queue Details */ = {
+			isa = PBXGroup;
+			children = (
+				8532FD872477C15A00EA3404 /* CompanyViewController.swift */,
+				8532FD892477C17200EA3404 /* CompanyViewController.storyboard */,
+			);
+			path = "Queue Details";
+			sourceTree = "<group>";
+		};
+		8583DE3F2467454900F2A406 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				852B09F0246FF537004715BD /* Main.storyboard */,
+				D3A7B5722460733C00C0247C /* ViewController.swift */,
+				852B09FA247011A5004715BD /* Queue.swift */,
+				852B09FC2470128B004715BD /* Data.swift */,
+				852B09F3246FF623004715BD /* CollectionView */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		8583DE402467455600F2A406 /* QR-Scanner */ = {
+			isa = PBXGroup;
+			children = (
+				8583DE42246746B600F2A406 /* QRScannerViewController.storyboard */,
+				8583DE44246746C800F2A406 /* QRScannerViewController.swift */,
+			);
+			path = "QR-Scanner";
+			sourceTree = "<group>";
+		};
+		8583DE41246745C000F2A406 /* Profile and Settings */ = {
+			isa = PBXGroup;
+			children = (
+				8583DE462467475100F2A406 /* UserSettingsViewController.storyboard */,
+				8583DE482467475C00F2A406 /* UserSettingsViewController.swift */,
+				85A1DAD7247AF6DF00D0FFE2 /* SettingsCell.swift */,
+				85A1DAD9247AF70A00D0FFE2 /* UserInfoHeader.swift */,
+				85A1DADB247B064800D0FFE2 /* SettingsSection.swift */,
+			);
+			path = "Profile and Settings";
 			sourceTree = "<group>";
 		};
 		A1FEF0B21A1D00573E970121 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				DBF168FFFB74F94CA642F429 /* Pods-VirtualLine User.debug.xcconfig */,
-				3A86A86FEFCF596EA30C5C42 /* Pods-VirtualLine User.release.xcconfig */,
+				F48EF4C176D9D1B38F45E679 /* Pods-VirtualLine User.debug.xcconfig */,
+				74BD7B8DB2D9146B5D4A0920 /* Pods-VirtualLine User.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -69,7 +162,7 @@
 				D3A7B56D2460733C00C0247C /* VirtualLine User */,
 				D3A7B56C2460733C00C0247C /* Products */,
 				A1FEF0B21A1D00573E970121 /* Pods */,
-				78F03367481869E1ADC09026 /* Frameworks */,
+				4D122DA623DD7E36562A2948 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,11 +177,14 @@
 		D3A7B56D2460733C00C0247C /* VirtualLine User */ = {
 			isa = PBXGroup;
 			children = (
-				D3427B2924607B9B00E5563F /* GoogleService-Info.plist */,
+				8583DE3F2467454900F2A406 /* Dashboard */,
+				8532FD7F2477C03000EA3404 /* Current Queue Details */,
+				8532FD802477C05900EA3404 /* Queue Details */,
+				8583DE402467455600F2A406 /* QR-Scanner */,
+				8583DE41246745C000F2A406 /* Profile and Settings */,
 				D3A7B56E2460733C00C0247C /* AppDelegate.swift */,
+				D3427B2924607B9B00E5563F /* GoogleService-Info.plist */,
 				D3A7B5702460733C00C0247C /* SceneDelegate.swift */,
-				D3A7B5722460733C00C0247C /* ViewController.swift */,
-				D3A7B5742460733C00C0247C /* Main.storyboard */,
 				D3A7B57A2460733D00C0247C /* Assets.xcassets */,
 				D3A7B57C2460733D00C0247C /* LaunchScreen.storyboard */,
 				D3A7B57F2460733D00C0247C /* Info.plist */,
@@ -104,11 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3A7B5822460733D00C0247C /* Build configuration list for PBXNativeTarget "VirtualLine User" */;
 			buildPhases = (
-				E6658D0311333364057BCCD5 /* [CP] Check Pods Manifest.lock */,
+				000B14291EB25CB4846AED48 /* [CP] Check Pods Manifest.lock */,
 				D3A7B5672460733C00C0247C /* Sources */,
 				D3A7B5682460733C00C0247C /* Frameworks */,
 				D3A7B5692460733C00C0247C /* Resources */,
-				2A011047EDBC995DCD6E5F11 /* [CP] Embed Pods Frameworks */,
+				C31397B7678751562CAABC3A /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -158,33 +254,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3A7B57E2460733D00C0247C /* LaunchScreen.storyboard in Resources */,
+				8532FD862477C0FE00EA3404 /* CurrentQueueDetailsViewController.storyboard in Resources */,
+				8532FD8A2477C17200EA3404 /* CompanyViewController.storyboard in Resources */,
+				8583DE472467475100F2A406 /* UserSettingsViewController.storyboard in Resources */,
 				D3A7B57B2460733D00C0247C /* Assets.xcassets in Resources */,
+				852B09F2246FF537004715BD /* Main.storyboard in Resources */,
 				D3427B2A24607B9B00E5563F /* GoogleService-Info.plist in Resources */,
-				D3A7B5762460733C00C0247C /* Main.storyboard in Resources */,
+				8583DE43246746B600F2A406 /* QRScannerViewController.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2A011047EDBC995DCD6E5F11 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VirtualLine User/Pods-VirtualLine User-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-VirtualLine User/Pods-VirtualLine User-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VirtualLine User/Pods-VirtualLine User-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E6658D0311333364057BCCD5 /* [CP] Check Pods Manifest.lock */ = {
+		000B14291EB25CB4846AED48 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -206,6 +289,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C31397B7678751562CAABC3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VirtualLine User/Pods-VirtualLine User-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-VirtualLine User/Pods-VirtualLine User-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-VirtualLine User/Pods-VirtualLine User-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -213,20 +313,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				85A1DAD8247AF6DF00D0FFE2 /* SettingsCell.swift in Sources */,
+				8583DE45246746C800F2A406 /* QRScannerViewController.swift in Sources */,
 				D3A7B5732460733C00C0247C /* ViewController.swift in Sources */,
 				D3A7B56F2460733C00C0247C /* AppDelegate.swift in Sources */,
+				85A1DADA247AF70A00D0FFE2 /* UserInfoHeader.swift in Sources */,
 				D3A7B5792460733C00C0247C /* VirtualLine_User.xcdatamodeld in Sources */,
+				85A1DADC247B064800D0FFE2 /* SettingsSection.swift in Sources */,
+				852B09FD2470128B004715BD /* Data.swift in Sources */,
+				852B09F9246FF8E9004715BD /* CompanyCell.swift in Sources */,
+				852B09FB247011A5004715BD /* Queue.swift in Sources */,
+				852B09F5246FF63D004715BD /* QueueSectionHeader.swift in Sources */,
+				8583DE492467475C00F2A406 /* UserSettingsViewController.swift in Sources */,
 				D3A7B5712460733C00C0247C /* SceneDelegate.swift in Sources */,
+				8532FD882477C15A00EA3404 /* CompanyViewController.swift in Sources */,
+				852B09F7246FF7B5004715BD /* QueueCell.swift in Sources */,
+				8532FD842477C0DE00EA3404 /* CurrentQueueDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D3A7B5742460733C00C0247C /* Main.storyboard */ = {
+		852B09F0246FF537004715BD /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				D3A7B5752460733C00C0247C /* Base */,
+				852B09F1246FF537004715BD /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -358,11 +470,11 @@
 		};
 		D3A7B5832460733D00C0247C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DBF168FFFB74F94CA642F429 /* Pods-VirtualLine User.debug.xcconfig */;
+			baseConfigurationReference = F48EF4C176D9D1B38F45E679 /* Pods-VirtualLine User.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MFV5357J8T;
+				DEVELOPMENT_TEAM = 2UJHZ7R572;
 				INFOPLIST_FILE = "VirtualLine User/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -377,11 +489,11 @@
 		};
 		D3A7B5842460733D00C0247C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3A86A86FEFCF596EA30C5C42 /* Pods-VirtualLine User.release.xcconfig */;
+			baseConfigurationReference = 74BD7B8DB2D9146B5D4A0920 /* Pods-VirtualLine User.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = MFV5357J8T;
+				DEVELOPMENT_TEAM = 2UJHZ7R572;
 				INFOPLIST_FILE = "VirtualLine User/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

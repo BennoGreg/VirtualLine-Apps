@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wBB-la-SL5">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Scan-->
+        <scene sceneID="gdy-hV-X2O">
+            <objects>
+                <viewController storyboardIdentifier="QRScannerViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wBB-la-SL5" customClass="QRScannerViewController" customModule="VirtualLine_User" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ef-JK-9SN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kkQ-Ph-elS">
+                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="KCP-GM-T8q"/>
+                                    <constraint firstAttribute="height" constant="300" id="eNk-ir-3tL"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Bitte positioniern Sie den QR-Code in der Mitte der Box." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lum-Ja-GwE">
+                                <rect key="frame" x="32" y="662" width="350" height="36"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                        <constraints>
+                            <constraint firstItem="Lum-Ja-GwE" firstAttribute="leading" secondItem="pSv-Ob-eOf" secondAttribute="leading" constant="32" id="1w5-TG-kYN"/>
+                            <constraint firstItem="Lum-Ja-GwE" firstAttribute="top" secondItem="kkQ-Ph-elS" secondAttribute="bottom" constant="64" id="MxE-fT-dvQ"/>
+                            <constraint firstItem="pSv-Ob-eOf" firstAttribute="trailing" secondItem="Lum-Ja-GwE" secondAttribute="trailing" constant="32" id="j4Q-KH-wbu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pSv-Ob-eOf"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Scan" image="camera.viewfinder" catalog="system" selectedImage="camera.viewfinder" id="Ybh-gR-g4B"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="infoTextLabel" destination="Lum-Ja-GwE" id="6aq-Zl-KxS"/>
+                        <outlet property="qrCodeFrameView" destination="kkQ-Ph-elS" id="Ihi-km-ObN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aMJ-fA-vXp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="127.53623188405798" y="57.589285714285708"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="camera.viewfinder" catalog="system" width="128" height="114"/>
+    </resources>
+</document>
