@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gHI-WA-cSF">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Queue View Controller-->
+        <scene sceneID="e1O-9K-Fmp">
+            <objects>
+                <viewController storyboardIdentifier="AddQueueViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gHI-WA-cSF" customClass="AddQueueViewController" customModule="VirtualLine_Admin" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j6v-hv-qw9">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name der Warteschlange" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oNk-2o-Fze">
+                                <rect key="frame" x="45" y="241" width="324" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Durchschnittliche Wartezeit" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ORJ-Nd-JY5">
+                                <rect key="frame" x="45" y="339" width="324" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Minuten" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="keo-WZ-pnp">
+                                <rect key="frame" x="165" y="491.5" width="84" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Erinnerung der nächsten Person" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7k8-x5-0jv">
+                                <rect key="frame" x="85" y="437" width="244.5" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="vor dem Termin" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kuz-2c-fml">
+                                <rect key="frame" x="147.5" y="557.5" width="119" height="22.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9DB-YS-bqH">
+                                <rect key="frame" x="120" y="644" width="174" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="IEb-DJ-8SM"/>
+                                </constraints>
+                                <state key="normal" title="Warteschlange erstellen"/>
+                                <connections>
+                                    <action selector="createQueueButtonPressed:" destination="gHI-WA-cSF" eventType="touchUpInside" id="CIb-Od-Hy0"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Warteschlange erstellen" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Zw-jK-jZI">
+                                <rect key="frame" x="32" y="145.5" width="350" height="31.5"/>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="7k8-x5-0jv" firstAttribute="centerY" secondItem="j6v-hv-qw9" secondAttribute="centerY" id="6oJ-oY-3Xc"/>
+                            <constraint firstItem="ORJ-Nd-JY5" firstAttribute="leading" secondItem="t4y-DS-HLM" secondAttribute="leading" constant="45" id="BPi-HR-sdl"/>
+                            <constraint firstItem="ORJ-Nd-JY5" firstAttribute="top" secondItem="oNk-2o-Fze" secondAttribute="bottom" constant="64" id="CkM-eW-Ppz"/>
+                            <constraint firstItem="t4y-DS-HLM" firstAttribute="trailing" secondItem="oNk-2o-Fze" secondAttribute="trailing" constant="45" id="EGd-gs-J1p"/>
+                            <constraint firstItem="9DB-YS-bqH" firstAttribute="leading" secondItem="t4y-DS-HLM" secondAttribute="leading" constant="120" id="FU7-hb-VMf"/>
+                            <constraint firstItem="7k8-x5-0jv" firstAttribute="centerX" secondItem="oNk-2o-Fze" secondAttribute="centerX" id="MAT-xe-Fz9"/>
+                            <constraint firstItem="oNk-2o-Fze" firstAttribute="top" secondItem="9Zw-jK-jZI" secondAttribute="bottom" constant="64" id="Mke-0J-POi"/>
+                            <constraint firstItem="oNk-2o-Fze" firstAttribute="leading" secondItem="t4y-DS-HLM" secondAttribute="leading" constant="45" id="QNY-nc-je8"/>
+                            <constraint firstItem="kuz-2c-fml" firstAttribute="top" secondItem="keo-WZ-pnp" secondAttribute="bottom" constant="32" id="RuC-9X-n5B"/>
+                            <constraint firstItem="t4y-DS-HLM" firstAttribute="trailing" secondItem="9DB-YS-bqH" secondAttribute="trailing" constant="120" id="ZeQ-3E-iOw"/>
+                            <constraint firstItem="7k8-x5-0jv" firstAttribute="centerX" secondItem="j6v-hv-qw9" secondAttribute="centerX" id="brI-10-ecg"/>
+                            <constraint firstItem="ORJ-Nd-JY5" firstAttribute="centerX" secondItem="oNk-2o-Fze" secondAttribute="centerX" id="dCa-TT-o4j"/>
+                            <constraint firstItem="keo-WZ-pnp" firstAttribute="centerX" secondItem="oNk-2o-Fze" secondAttribute="centerX" id="dec-QB-dNW"/>
+                            <constraint firstItem="keo-WZ-pnp" firstAttribute="top" secondItem="7k8-x5-0jv" secondAttribute="bottom" constant="32" id="ebf-Hj-pwV"/>
+                            <constraint firstItem="keo-WZ-pnp" firstAttribute="leading" secondItem="t4y-DS-HLM" secondAttribute="leading" constant="165" id="fGE-5E-Pnx"/>
+                            <constraint firstItem="7k8-x5-0jv" firstAttribute="top" secondItem="ORJ-Nd-JY5" secondAttribute="bottom" constant="64" id="g5g-Qd-LUN"/>
+                            <constraint firstItem="t4y-DS-HLM" firstAttribute="trailing" secondItem="ORJ-Nd-JY5" secondAttribute="trailing" constant="45" id="kBi-CJ-MaT"/>
+                            <constraint firstItem="9DB-YS-bqH" firstAttribute="top" secondItem="kuz-2c-fml" secondAttribute="bottom" constant="64" id="mAd-qL-S23"/>
+                            <constraint firstItem="t4y-DS-HLM" firstAttribute="trailing" secondItem="keo-WZ-pnp" secondAttribute="trailing" constant="165" id="ncF-ts-cey"/>
+                            <constraint firstItem="9DB-YS-bqH" firstAttribute="centerX" secondItem="kuz-2c-fml" secondAttribute="centerX" id="r3i-ic-W7o"/>
+                            <constraint firstItem="kuz-2c-fml" firstAttribute="centerX" secondItem="oNk-2o-Fze" secondAttribute="centerX" id="sJY-sM-Xhu"/>
+                            <constraint firstItem="9Zw-jK-jZI" firstAttribute="leading" secondItem="t4y-DS-HLM" secondAttribute="leading" constant="32" id="v8w-LY-6GJ"/>
+                            <constraint firstItem="t4y-DS-HLM" firstAttribute="trailing" secondItem="9Zw-jK-jZI" secondAttribute="trailing" constant="32" id="y5A-mS-8ds"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="t4y-DS-HLM"/>
+                    </view>
+                    <connections>
+                        <outlet property="createQueueButton" destination="9DB-YS-bqH" id="LqX-4n-ZrG"/>
+                        <outlet property="queueAverageWaitingTimeTextfield" destination="ORJ-Nd-JY5" id="l7h-iP-9XH"/>
+                        <outlet property="queueNameTextField" destination="oNk-2o-Fze" id="eVd-fE-L4j"/>
+                        <outlet property="queueReminderTextfield" destination="keo-WZ-pnp" id="eqh-ox-fBw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6mX-IJ-dTa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="86.956521739130437" y="106.47321428571428"/>
+        </scene>
+    </scenes>
+</document>

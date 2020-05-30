@@ -21,7 +21,11 @@
                                     <constraint firstAttribute="height" constant="65" id="a0L-rk-lyr"/>
                                     <constraint firstAttribute="width" constant="300" id="jZY-YU-8fB"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="20"/>
                                 <state key="normal" title="Neue Warteschlange"/>
+                                <connections>
+                                    <segue destination="5Iu-BT-IHd" kind="show" id="0Kp-2w-WDq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -47,10 +51,23 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="newQueueButton" destination="JXS-X0-wIi" id="vmi-Lw-n3v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1042.0289855072465" y="91.741071428571431"/>
+        </scene>
+        <!--AddQueueViewController-->
+        <scene sceneID="mZ1-Th-2gS">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AddQueueViewController" id="5Iu-BT-IHd" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="uJo-b6-McJ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OPL-mO-Y8q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1601" y="86"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ksZ-rJ-E6r">
