@@ -26,6 +26,7 @@ class AddQueueViewController: UIViewController{
     @IBAction func createQueueButtonPressed(_ sender: UIButton) {
         
     if let navController = self.navigationController {
+        UserDefaults.standard.set(true, forKey: "isQueueCreated")
         navController.popViewController(animated: true)
     }
         

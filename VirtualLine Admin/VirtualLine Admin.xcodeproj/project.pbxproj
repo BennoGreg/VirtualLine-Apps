@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		822A4A04B4136AB068E9171D /* Pods_VirtualLine_Admin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 641D194B44849765118619E6 /* Pods_VirtualLine_Admin.framework */; };
+		855301DC2483FF570040CF7D /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855301DB2483FF570040CF7D /* TestData.swift */; };
 		855A6B8424825A07003C7A49 /* AddQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A6B8324825A07003C7A49 /* AddQueueViewController.swift */; };
 		8577446B24825A7F00F3C2B7 /* AddQueueViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8577446A24825A7F00F3C2B7 /* AddQueueViewController.storyboard */; };
 		D3427B282460758600E5563F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3427B272460758600E5563F /* GoogleService-Info.plist */; };
@@ -24,6 +25,7 @@
 		073F36305FD03C5FAE70ECD5 /* Pods-VirtualLine Admin.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualLine Admin.debug.xcconfig"; path = "Target Support Files/Pods-VirtualLine Admin/Pods-VirtualLine Admin.debug.xcconfig"; sourceTree = "<group>"; };
 		56A317E71487DBE89CF691D2 /* Pods-VirtualLine Admin.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VirtualLine Admin.release.xcconfig"; path = "Target Support Files/Pods-VirtualLine Admin/Pods-VirtualLine Admin.release.xcconfig"; sourceTree = "<group>"; };
 		641D194B44849765118619E6 /* Pods_VirtualLine_Admin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VirtualLine_Admin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		855301DB2483FF570040CF7D /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		855A6B8324825A07003C7A49 /* AddQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQueueViewController.swift; sourceTree = "<group>"; };
 		8577446A24825A7F00F3C2B7 /* AddQueueViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddQueueViewController.storyboard; sourceTree = "<group>"; };
 		D3427B272460758600E5563F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -57,6 +59,21 @@
 				56A317E71487DBE89CF691D2 /* Pods-VirtualLine Admin.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		855301D92483FEAE0040CF7D /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		855301DA2483FF330040CF7D /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				855301DB2483FF570040CF7D /* TestData.swift */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 		855A6B82248259D7003C7A49 /* New Queue */ = {
@@ -100,9 +117,11 @@
 			children = (
 				855CE44D248043890094ED1C /* Dashboard */,
 				855A6B82248259D7003C7A49 /* New Queue */,
-				D3427B272460758600E5563F /* GoogleService-Info.plist */,
-				D3A7B54B246072E500C0247C /* AppDelegate.swift */,
+				855301D92483FEAE0040CF7D /* Settings */,
+				855301DA2483FF330040CF7D /* Data */,
 				D3A7B54D246072E500C0247C /* SceneDelegate.swift */,
+				D3A7B54B246072E500C0247C /* AppDelegate.swift */,
+				D3427B272460758600E5563F /* GoogleService-Info.plist */,
 				D3A7B557246072E700C0247C /* Assets.xcassets */,
 				D3A7B559246072E700C0247C /* LaunchScreen.storyboard */,
 				D3A7B55C246072E700C0247C /* Info.plist */,
@@ -239,6 +258,7 @@
 				D3A7B550246072E500C0247C /* ViewController.swift in Sources */,
 				D3A7B556246072E500C0247C /* VirtualLine_Admin.xcdatamodeld in Sources */,
 				855A6B8424825A07003C7A49 /* AddQueueViewController.swift in Sources */,
+				855301DC2483FF570040CF7D /* TestData.swift in Sources */,
 				D3A7B54C246072E500C0247C /* AppDelegate.swift in Sources */,
 				D3A7B54E246072E500C0247C /* SceneDelegate.swift in Sources */,
 			);
