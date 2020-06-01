@@ -23,6 +23,14 @@ class ViewController: UIViewController {
     @IBOutlet var customerNotAvailableButton: UIButton!
     @IBOutlet var acceptCustomerButton: UIButton!
     @IBOutlet var bigStackView: UIStackView!
+    var waitingNumber = 1
+    
+    struct segues {
+        
+        static let settingsSegue = "SettingsSegue"
+        static let presentationModeSegue = "presentationModeSegue"
+        
+    }
 
     var testQueue = [User(name: "Niklas Wagner", userID: "A219"), User(name: "Benedikt Langer", userID: "B372"), User(name: "Jan Cortiel", userID: "D234"), User(name: "Antonia Langer", userID: "A282"), User(name: "Maria Rohnefeld", userID: "A232"), User(name: "Sebastian Kurz", userID: "O281")]
 
@@ -36,30 +44,49 @@ class ViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
+        
+         setUpFirebase()
+        
         let isQueueCreated = UserDefaults.standard.bool(forKey: "isQueueCreated")
-        if isQueueCreated {
+        if isQueueCreated && !testQueue.isEmpty {
             newQueueButton.removeFromSuperview()
             bigStackView.isHidden = false
             currentCustomerLabel.text = testQueue.first?.name
-            currenCustomerIDLabel.text = "ID: \(testQueue.first?.userID)"
-            nextCustomerNameLabel.text = testQueue[1].name
-            nextCustomerIDLabel.text = "ID: \(testQueue[1].userID)"
+            if let firstCus = testQueue.first{
+            currenCustomerIDLabel.text = "Nummer: "+String(waitingNumber)
+            nextCustomerNameLabel.text = String(waitingNumber+1)
+            nextCustomerIDLabel.text = "ID: "+testQueue[1].userID
             queueLengthLabel.text = "\(testQueue.count) Personen"
+            }else{
+               
+            }
         }
     }
 
     func setUpUI() {
-        let userImage = UIImageView(image: UIImage(named: "user.png"))
-        let userBarButton = UIBarButtonItem(customView: userImage)
-        navigationItem.rightBarButtonItem = userBarButton
-
-        let presentationModeImage = UIImageView(image: UIImage(named: "video-player.png"))
-        let presentationModeBarButton = UIBarButtonItem(customView: presentationModeImage)
-        navigationItem.leftBarButtonItem = presentationModeBarButton
-
         newQueueButton.applyGradient(colors: [ViewController.UIColorFromRGB(0x69BDD2).cgColor, ViewController.UIColorFromRGB(0x44BCDA).cgColor])
         newQueueButton.setTitle("Warteschlange erstellen", for: .normal)
     }
+  
+  
+    
+    /*
+  
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == segues.settingsSegue {
+             if let settingsViewController = segue.destination as? AdminSettingsViewController {
+                     //nextViewController.valueOfxyz = "XYZ"
+                     //settingsViewController.valueOf123 = 123
+             }
+        }else if segue.identifier == segues.presentationModeSegue{
+
+            if let presentationModeViewController = segue.destination as? AdminSettingsViewController {
+                               //nextViewController.valueOfxyz = "XYZ"
+                               //settingsViewController.valueOf123 = 123
+                       }
+        }
+     }
+ */
 
     static func UIColorFromRGB(_ rgbValue: Int) -> UIColor {
         return UIColor(red: (CGFloat)((rgbValue & 0xFF0000) >> 16) / 255.0, green: (CGFloat)((rgbValue & 0x00FF00) >> 8) / 255.0, blue: (CGFloat)(rgbValue & 0x0000FF) / 255.0, alpha: 1.0)
@@ -76,10 +103,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func customerNotAvailableButtonPressed(_ sender: UIButton) {
+          if (!testQueue.isEmpty){
         acceptCustomerButton.isHidden = false
         customerNotAvailableButton.isHidden = false
         customerDoneButton.isHidden = true
         nextCustomer()
+            
+        }
     }
 
     @IBAction func acceptCustomerButtonPressed(_ sender: UIButton) {
@@ -94,13 +124,16 @@ class ViewController: UIViewController {
 
     func nextCustomer() {
         testQueue.removeFirst()
+        waitingNumber += 1
         queueLengthLabel.text = "\(testQueue.count) Personen"
 
         if !testQueue.isEmpty {
             if let curCustomer = testQueue.first{
+              
                 
                 currentCustomerLabel.text = curCustomer.name
-                currenCustomerIDLabel.text = "ID: \(curCustomer.userID)"
+                currenCustomerIDLabel.text = "Nummer: " + String(waitingNumber)
+                
                 
             }
 
@@ -112,7 +145,7 @@ class ViewController: UIViewController {
             } else {
                 nextCustomerNameLabel.text = testQueue[1].name
                 
-                nextCustomerIDLabel.text = "ID: \( testQueue[1].userID)"
+                nextCustomerIDLabel.text = "Nummer: " + String(waitingNumber+1)
                 
                 queueLengthLabel.text = "\(testQueue.count) Personen"
             }
@@ -124,6 +157,15 @@ class ViewController: UIViewController {
             queueLengthLabel.text = "Derzeit keine Personen"
         }
     }
+    
+    static func updateQueue(waitingTime: String, queueLength: String){
+        
+       // queueLengthLabel.text = queueLength
+       // queueWaitingTimeLabel.text = waitingTime
+        print("test")
+        
+    }
+    
 }
 
 extension UIButton {

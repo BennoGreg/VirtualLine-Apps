@@ -16,6 +16,11 @@ class AddQueueViewController: UIViewController{
     @IBOutlet weak var createQueueButton: UIButton!
     override func viewDidLoad() {
         setUpUI()
+        queueReminderTextfield.keyboardType = .numberPad
+        queueAverageWaitingTimeTextfield.keyboardType = .numberPad
+        // ready for receiving notification
+      
+
     }
     
     func setUpUI(){
@@ -25,10 +30,22 @@ class AddQueueViewController: UIViewController{
     
     @IBAction func createQueueButtonPressed(_ sender: UIButton) {
         
-    if let navController = self.navigationController {
-        UserDefaults.standard.set(true, forKey: "isQueueCreated")
-        navController.popViewController(animated: true)
-    }
+        
+        if queueNameTextField.text != "" && queueAverageWaitingTimeTextfield.text != "" && queueReminderTextfield.text != ""{
+            if let navController = self.navigationController {
+                
+                if let name = queueNameTextField.text {
+                    if let waitTime = queueAverageWaitingTimeTextfield.text{
+                        if let reminder = queueReminderTextfield.text{
+                
+                createQueue(queueName: name, averageTimeCustomer: waitTime, minutesBeforeNotifyingCustomer: reminder)
+                UserDefaults.standard.set(true, forKey: "isQueueCreated")
+                navController.popViewController(animated: true)
+            }
+                }
+                }
+            }
+        }
         
     }
 }

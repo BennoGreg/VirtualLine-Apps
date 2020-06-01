@@ -10,7 +10,6 @@
         <!--Virtual Line Admin-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="DashboardViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="ViewController" customModule="VirtualLine_Admin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="834" height="1194"/>
@@ -258,19 +257,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Virtual Line Admin" id="VN4-ZC-qFN">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="airplayvideo" catalog="system" landscapeImage="airplayvideo" style="plain" id="NnC-9R-RsK">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1Xl-ym-Q37">
-                                <rect key="frame" x="20" y="10" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="person.fill" catalog="system" landscapeImage="person.fill" style="plain" id="dpx-7Z-zdU">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="lSF-i9-R4u">
-                                <rect key="frame" x="722" y="10" width="92" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="video-player" id="sEG-v9-gWP"/>
+                        <barButtonItem key="rightBarButtonItem" title="Settings" image="user" id="xds-SE-AJf">
+                            <connections>
+                                <segue destination="D2D-4I-540" kind="show" identifier="settingsSegue" id="PdW-58-B0d"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
@@ -289,8 +280,19 @@
                         <outlet property="queueWaitingTimeLabel" destination="bAg-Pa-ICu" id="lCW-8r-cCb"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1041.7266187050361" y="91.457286432160799"/>
+        </scene>
+        <!--AdminSettingsViewController-->
+        <scene sceneID="Xbb-n3-854">
+            <objects>
+                <viewControllerPlaceholder storyboardName="AdminSettingsViewController" id="D2D-4I-540" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="7HE-ud-zz3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nWI-et-YWO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1596" y="-78"/>
         </scene>
         <!--AddQueueViewController-->
         <scene sceneID="mZ1-Th-2gS">
@@ -322,7 +324,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="airplayvideo" catalog="system" width="128" height="98"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="user" width="24" height="24"/>
+        <image name="video-player" width="24" height="24"/>
     </resources>
 </document>
