@@ -19,29 +19,31 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
     
     override func viewWillAppear(_ animated: Bool) {
              
-        setUpUI()
+    //    setUpUI()
+        
           
-                     if (captureSession?.isRunning == false) {
-                        captureSession.startRunning()
-                    }
+//                     if (captureSession?.isRunning == false) {
+//                        captureSession.startRunning()
+//                    }
        }
 
        override func viewWillDisappear(_ animated: Bool) {
         
-           navigationItem.largeTitleDisplayMode = .always
-           navigationController?.navigationBar.prefersLargeTitles = true
-           navigationController?.navigationBar.isTranslucent = true
+         //  navigationItem.largeTitleDisplayMode = .always
+//navigationController?.navigationBar.prefersLargeTitles = true
+         //  navigationController?.navigationBar.isTranslucent = true
            
          //  super.viewWillDisappear(animated)
-
-           if (captureSession?.isRunning == true) {
-               captureSession.stopRunning()
-           }
+          
+        
+          // if (captureSession?.isRunning == true) {
+              // captureSession.stopRunning()
+         //  }
        }
     
         override func viewDidLoad() {
             super.viewDidLoad()
-            
+    }/*
             setUpUI()
 
             captureSession = AVCaptureSession()
@@ -97,14 +99,14 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
     
    
     func setUpUI(){
-        self.parent?.title = "Scan"
-        
-        qrCodeFrameView.translatesAutoresizingMaskIntoConstraints = false
-        qrCodeFrameView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        qrCodeFrameView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
-           navigationItem.largeTitleDisplayMode = .never
-           navigationController?.navigationBar.prefersLargeTitles = false
-           navigationController?.navigationBar.isTranslucent = true
+//        self.parent?.title = "Scan"
+//
+//        qrCodeFrameView.translatesAutoresizingMaskIntoConstraints = false
+//        qrCodeFrameView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        qrCodeFrameView.centerYAnchor.constraint(equalTo: view.centerYAnchor).isActive = true
+//           navigationItem.largeTitleDisplayMode = .never
+//           navigationController?.navigationBar.prefersLargeTitles = false
+//           navigationController?.navigationBar.isTranslucent = true
     }
     
 
@@ -140,6 +142,6 @@ class QRScannerViewController: UIViewController, AVCaptureMetadataOutputObjectsD
 
         override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
             return .portrait
-        }
+        }*/
     }
     

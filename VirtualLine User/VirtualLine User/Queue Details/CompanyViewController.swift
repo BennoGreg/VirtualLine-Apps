@@ -51,14 +51,19 @@ class CompanyViewController: UIViewController {
     }
     @IBAction func queueButtonPressed(_ sender: UIButton) {
         
+        
+       
+        
         let duration: TimeInterval = 0.8
 
         if queuedUp {
+            
+            userDequeue(queueID: "UY4qnLOuYiBEKAtmVYH9", userID: "User1")
             UIView.animate(withDuration: duration, animations: {
                 self.queueUpButton.center.y = self.queueUpButton.center.y-100
             }) { (true) in
                 
-                print("twst")
+               
                 if let layer = self.queueUpButton.layer.sublayers? .first {// The first sublayer of
                     layer.removeFromSuperlayer ()
                 }
@@ -68,6 +73,9 @@ class CompanyViewController: UIViewController {
             }
         }else{
         
+             userEnqueue(queueID: "UY4qnLOuYiBEKAtmVYH9", userID: "User1")
+       
+            
         UIView.animate(withDuration: duration, animations: {
             self.queueUpButton.center.y = self.queueUpButton.center.y+100
             

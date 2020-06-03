@@ -18,6 +18,7 @@
 		8532FD862477C0FE00EA3404 /* CurrentQueueDetailsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8532FD852477C0FE00EA3404 /* CurrentQueueDetailsViewController.storyboard */; };
 		8532FD882477C15A00EA3404 /* CompanyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8532FD872477C15A00EA3404 /* CompanyViewController.swift */; };
 		8532FD8A2477C17200EA3404 /* CompanyViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8532FD892477C17200EA3404 /* CompanyViewController.storyboard */; };
+		855E0E9A248685DF00DEF643 /* ServerCommunication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855E0E99248685DF00DEF643 /* ServerCommunication.swift */; };
 		8583DE43246746B600F2A406 /* QRScannerViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8583DE42246746B600F2A406 /* QRScannerViewController.storyboard */; };
 		8583DE45246746C800F2A406 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8583DE44246746C800F2A406 /* QRScannerViewController.swift */; };
 		8583DE472467475100F2A406 /* UserSettingsViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8583DE462467475100F2A406 /* UserSettingsViewController.storyboard */; };
@@ -46,6 +47,7 @@
 		8532FD852477C0FE00EA3404 /* CurrentQueueDetailsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CurrentQueueDetailsViewController.storyboard; sourceTree = "<group>"; };
 		8532FD872477C15A00EA3404 /* CompanyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompanyViewController.swift; sourceTree = "<group>"; };
 		8532FD892477C17200EA3404 /* CompanyViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CompanyViewController.storyboard; sourceTree = "<group>"; };
+		855E0E99248685DF00DEF643 /* ServerCommunication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServerCommunication.swift; sourceTree = "<group>"; };
 		8583DE42246746B600F2A406 /* QRScannerViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = QRScannerViewController.storyboard; sourceTree = "<group>"; };
 		8583DE44246746C800F2A406 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
 		8583DE462467475100F2A406 /* UserSettingsViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = UserSettingsViewController.storyboard; sourceTree = "<group>"; };
@@ -112,6 +114,14 @@
 				8532FD892477C17200EA3404 /* CompanyViewController.storyboard */,
 			);
 			path = "Queue Details";
+			sourceTree = "<group>";
+		};
+		855E0E98248685BA00DEF643 /* Server Communication */ = {
+			isa = PBXGroup;
+			children = (
+				855E0E99248685DF00DEF643 /* ServerCommunication.swift */,
+			);
+			path = "Server Communication";
 			sourceTree = "<group>";
 		};
 		8583DE3F2467454900F2A406 /* Dashboard */ = {
@@ -182,8 +192,9 @@
 				8532FD802477C05900EA3404 /* Queue Details */,
 				8583DE402467455600F2A406 /* QR-Scanner */,
 				8583DE41246745C000F2A406 /* Profile and Settings */,
-				D3A7B56E2460733C00C0247C /* AppDelegate.swift */,
+				855E0E98248685BA00DEF643 /* Server Communication */,
 				D3427B2924607B9B00E5563F /* GoogleService-Info.plist */,
+				D3A7B56E2460733C00C0247C /* AppDelegate.swift */,
 				D3A7B5702460733C00C0247C /* SceneDelegate.swift */,
 				D3A7B57A2460733D00C0247C /* Assets.xcassets */,
 				D3A7B57C2460733D00C0247C /* LaunchScreen.storyboard */,
@@ -317,6 +328,7 @@
 				8583DE45246746C800F2A406 /* QRScannerViewController.swift in Sources */,
 				D3A7B5732460733C00C0247C /* ViewController.swift in Sources */,
 				D3A7B56F2460733C00C0247C /* AppDelegate.swift in Sources */,
+				855E0E9A248685DF00DEF643 /* ServerCommunication.swift in Sources */,
 				85A1DADA247AF70A00D0FFE2 /* UserInfoHeader.swift in Sources */,
 				D3A7B5792460733C00C0247C /* VirtualLine_User.xcdatamodeld in Sources */,
 				85A1DADC247B064800D0FFE2 /* SettingsSection.swift in Sources */,

@@ -15,16 +15,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kkQ-Ph-elS">
-                                <rect key="frame" x="57" y="298" width="300" height="300"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kkQ-Ph-elS">
+                                <rect key="frame" x="57" y="194" width="300" height="300"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="KCP-GM-T8q"/>
                                     <constraint firstAttribute="height" constant="300" id="eNk-ir-3tL"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Bitte positioniern Sie den QR-Code in der Mitte der Box." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lum-Ja-GwE">
-                                <rect key="frame" x="32" y="662" width="350" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitte positioniern Sie den QR-Code in der Mitte der Box." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lum-Ja-GwE">
+                                <rect key="frame" x="32" y="558" width="350" height="36"/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -34,6 +34,8 @@
                         <constraints>
                             <constraint firstItem="Lum-Ja-GwE" firstAttribute="leading" secondItem="pSv-Ob-eOf" secondAttribute="leading" constant="32" id="1w5-TG-kYN"/>
                             <constraint firstItem="Lum-Ja-GwE" firstAttribute="top" secondItem="kkQ-Ph-elS" secondAttribute="bottom" constant="64" id="MxE-fT-dvQ"/>
+                            <constraint firstItem="kkQ-Ph-elS" firstAttribute="top" secondItem="pSv-Ob-eOf" secondAttribute="top" constant="150" id="P6e-7l-4WK"/>
+                            <constraint firstItem="kkQ-Ph-elS" firstAttribute="leading" secondItem="pSv-Ob-eOf" secondAttribute="leading" constant="57" id="Zdy-l8-T4x"/>
                             <constraint firstItem="pSv-Ob-eOf" firstAttribute="trailing" secondItem="Lum-Ja-GwE" secondAttribute="trailing" constant="32" id="j4Q-KH-wbu"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pSv-Ob-eOf"/>

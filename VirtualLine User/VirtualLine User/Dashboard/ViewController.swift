@@ -36,7 +36,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
 
 
        
-        
+        setUpFirebase()
    
         
     }
