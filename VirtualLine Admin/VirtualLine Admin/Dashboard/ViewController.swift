@@ -32,7 +32,7 @@ class ViewController: UIViewController {
         
     }
 
-    var testQueue = [User(name: "Niklas Wagner", userID: "A219"), User(name: "Benedikt Langer", userID: "B372"), User(name: "Jan Cortiel", userID: "D234"), User(name: "Antonia Langer", userID: "A282"), User(name: "Maria Rohnefeld", userID: "A232"), User(name: "Sebastian Kurz", userID: "O281")]
+    var testQueue = [User(name: "Niklas Wagner", userID: "A219"), User(name: "Benedikt Langer", userID: "B372"), User(name: "Jan Cortiel", userID: "D234"), User(name: "Antonia Langer", userID: "A282"), User(name: "Maria Rohnefeld", userID: "A232"), User(name: "Philip Müller", userID: "O281")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
