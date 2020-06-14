@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vsc-bj-eVR">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Alle Warteschlangen-->
+        <scene sceneID="c4Q-g2-Ubx">
+            <objects>
+                <viewController storyboardIdentifier="AllQueuesViewController" title="Alle Warteschlangen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Vsc-bj-eVR" customClass="AllQueuesViewController" customModule="VirtualLine_User" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bdI-AN-8V8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Gei-7k-UkI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="DNz-m0-DIi">
+                                    <size key="itemSize" width="373" height="128"/>
+                                    <size key="headerReferenceSize" width="50" height="35"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="16" maxX="0.0" maxY="16"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="allQueuesCell" id="Pjn-lV-1iN" customClass="AllQueuesCell" customModule="VirtualLine_User" customModuleProvider="target">
+                                        <rect key="frame" x="20.5" y="51" width="373" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WqU-Iv-L1X">
+                                            <rect key="frame" x="0.0" y="0.0" width="373" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QueueName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AGL-hf-eMI">
+                                                    <rect key="frame" x="16" y="49.5" width="151" height="29"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="22"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="person.3" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="zfh-sa-1OX">
+                                                    <rect key="frame" x="250.5" y="17.5" width="25" height="22.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="IIy-du-io8"/>
+                                                        <constraint firstAttribute="width" constant="25" id="noK-5j-GA1"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clock" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="iZg-UY-PUm">
+                                                    <rect key="frame" x="250.5" y="87.5" width="25" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="fHz-56-zUK"/>
+                                                        <constraint firstAttribute="width" constant="25" id="lkt-s7-FUc"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8 Personen" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XgZ-Qm-mhN">
+                                                    <rect key="frame" x="283.5" y="19.5" width="73.5" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="42 Minuten" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hd8-3v-Fgf">
+                                                    <rect key="frame" x="283.5" y="90.5" width="73.5" height="18.5"/>
+                                                    <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="14"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemGray6Color" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <constraints>
+                                                <constraint firstItem="zfh-sa-1OX" firstAttribute="top" secondItem="WqU-Iv-L1X" secondAttribute="top" constant="16" id="YDj-Ad-e5f"/>
+                                                <constraint firstItem="Hd8-3v-Fgf" firstAttribute="centerY" secondItem="iZg-UY-PUm" secondAttribute="centerY" id="gNT-vy-G7c"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hd8-3v-Fgf" secondAttribute="trailing" constant="16" id="gar-qJ-LXA"/>
+                                                <constraint firstItem="iZg-UY-PUm" firstAttribute="centerX" secondItem="zfh-sa-1OX" secondAttribute="centerX" id="jbi-ez-4pj"/>
+                                                <constraint firstAttribute="trailing" secondItem="XgZ-Qm-mhN" secondAttribute="trailing" constant="16" id="jqX-rO-JzT"/>
+                                                <constraint firstAttribute="bottom" secondItem="iZg-UY-PUm" secondAttribute="bottom" constant="16" id="l4S-ye-q2y"/>
+                                                <constraint firstItem="AGL-hf-eMI" firstAttribute="leading" secondItem="WqU-Iv-L1X" secondAttribute="leading" constant="16" id="pEP-GS-Ph2"/>
+                                                <constraint firstItem="Hd8-3v-Fgf" firstAttribute="leading" secondItem="iZg-UY-PUm" secondAttribute="trailing" constant="8" id="rPR-AO-M2c"/>
+                                                <constraint firstItem="XgZ-Qm-mhN" firstAttribute="centerY" secondItem="zfh-sa-1OX" secondAttribute="centerY" id="rtc-Oz-Vbx"/>
+                                                <constraint firstItem="XgZ-Qm-mhN" firstAttribute="leading" secondItem="zfh-sa-1OX" secondAttribute="trailing" constant="8" id="sYp-b3-I6E"/>
+                                                <constraint firstItem="AGL-hf-eMI" firstAttribute="centerY" secondItem="WqU-Iv-L1X" secondAttribute="centerY" id="xG8-Ih-OH2"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="373" height="128"/>
+                                        <connections>
+                                            <outlet property="queueLengthLabel" destination="XgZ-Qm-mhN" id="rC0-3R-wKC"/>
+                                            <outlet property="queueNameLabel" destination="AGL-hf-eMI" id="9Jx-tv-01x"/>
+                                            <outlet property="queueWaitingTimeLabel" destination="Hd8-3v-Fgf" id="uzu-lU-Zy0"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="allQueuesSectionHeader" id="xLG-5L-Kuy" customClass="AllQueuesSectionHeader" customModule="VirtualLine_User" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="35"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9DJ-qI-fxf">
+                                            <rect key="frame" x="40" y="6" width="44.5" height="23.5"/>
+                                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="18"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstItem="9DJ-qI-fxf" firstAttribute="centerY" secondItem="xLG-5L-Kuy" secondAttribute="centerY" id="TYU-i9-V8X"/>
+                                        <constraint firstItem="9DJ-qI-fxf" firstAttribute="leading" secondItem="xLG-5L-Kuy" secondAttribute="leadingMargin" constant="32" id="exq-Fi-Yib"/>
+                                    </constraints>
+                                    <connections>
+                                        <outlet property="allQueuesSectionLabel" destination="9DJ-qI-fxf" id="fcE-LP-Hzy"/>
+                                    </connections>
+                                </collectionReusableView>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="fSA-VF-ghS" firstAttribute="bottom" secondItem="Gei-7k-UkI" secondAttribute="bottom" id="XEx-eW-Vim"/>
+                            <constraint firstItem="Gei-7k-UkI" firstAttribute="leading" secondItem="fSA-VF-ghS" secondAttribute="leading" id="Z8B-8t-rsM"/>
+                            <constraint firstItem="fSA-VF-ghS" firstAttribute="trailing" secondItem="Gei-7k-UkI" secondAttribute="trailing" id="qag-C6-8QU"/>
+                            <constraint firstItem="Gei-7k-UkI" firstAttribute="top" secondItem="fSA-VF-ghS" secondAttribute="top" id="zBb-vK-PPJ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fSA-VF-ghS"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="All Queues" image="list.dash" catalog="system" id="5Ue-tA-n0J"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="allQueuesCollectionView" destination="Gei-7k-UkI" id="ua9-Pi-JUZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8uY-Lc-8QE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="147.82608695652175" y="73.660714285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="clock" catalog="system" width="128" height="121"/>
+        <image name="list.dash" catalog="system" width="128" height="85"/>
+        <image name="person.3" catalog="system" width="128" height="62"/>
+    </resources>
+</document>

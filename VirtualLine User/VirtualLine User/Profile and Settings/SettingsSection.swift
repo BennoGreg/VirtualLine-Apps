@@ -21,11 +21,11 @@ enum SettingsSection: Int, CaseIterable, CustomStringConvertible{
         
         switch self {
         case .profile:
-            return "Profile"
+            return "Profil"
         case .settings:
-            return "Settings"
+            return "Einstellung"
         case .aboutUs:
-            return "About us" 
+            return "Über uns"
         }
         
     }
@@ -44,9 +44,9 @@ enum ProfileOptions: Int, CaseIterable, CustomStringConvertible, SectionType{
            
            switch self {
            case .editProfile:
-               return "Edit Profile"
+               return "Profil bearbeiten"
            case .logOut:
-               return "Log Out"
+               return "Ausloggen"
            }
            
        }
@@ -76,9 +76,9 @@ enum SettingsOptions: Int, CaseIterable, SectionType{
         
         switch self {
         case .notification:
-            return "Notification"
+            return "Benachrichtigungen"
         case .language:
-            return "Language"
+            return "Sprache"
         }
         
     }
@@ -96,9 +96,9 @@ enum AboutUsOptions: Int, CaseIterable, CustomStringConvertible, SectionType{
            
            switch self {
            case .gtc:
-               return "General terms and conditions (GTC)"
+               return "Allgemeine Geschäftsbedingungen (AGB)"
            case .dataPrivacy:
-               return "Data Privacy"
+               return "Datenschutz"
            }
            
        }

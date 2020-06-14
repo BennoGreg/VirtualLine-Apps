@@ -30,9 +30,9 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
        navigationItem.largeTitleDisplayMode = .always
        self.navigationController?.navigationBar.prefersLargeTitles = true
      
-        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.white]
+        let textAttributes = [NSAttributedString.Key.foregroundColor:UIColor.black]
         navigationController?.navigationBar.titleTextAttributes = textAttributes
-        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
+        navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
 
 
        
@@ -124,12 +124,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     
     
     func updateCellLayout(cell: UICollectionViewCell){
-        cell.backgroundColor = .cyan
-       cell.layer.cornerRadius = 10
-       cell.layer.borderWidth = 1.0
-       cell.layer.borderColor = UIColor.lightGray.cgColor
        
-       cell.layer.backgroundColor = UIColor.white.cgColor
+        cell.layer.cornerRadius = 10
+       // cell.layer.borderWidth = 1.0
+        cell.layer.borderColor = UIColor.lightGray.cgColor
+       
+      
 //       cell.layer.shadowColor = UIColor.gray.cgColor
 //       cell.layer.shadowOffset = CGSize(width: 1.0, height: 2.0)
 //       cell.layer.shadowRadius = 1.0

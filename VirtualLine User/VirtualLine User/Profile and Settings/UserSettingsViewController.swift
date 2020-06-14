@@ -63,14 +63,7 @@ class UserSettingsViewController: UIViewController, UITableViewDelegate, UITable
         navigationController?.navigationBar.titleTextAttributes = textAttributes
         navigationController?.navigationBar.largeTitleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
 
-        // navigationItem.largeTitleDisplayMode = .never
-        // navigationController?.navigationBar.prefersLargeTitles = true
-        //  navigationController?.navigationBar.isTranslucent = false
-//        navigationController?.navigationBar.prefersLargeTitles = true
-//        navigationController?.navigationBar.isTranslucent = false
-        // navigationController?.navigationBar.barStyle = .black
-//        navigationController?.navigationBar.barTintColor = UIColor(red: 55 / 255, green: 120 / 255, blue: 250 / 255, alpha: 1)
-        // navigationItem.title = "Settings"
+       
     }
 
     // MARK: TableView:
