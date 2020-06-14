@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>998755357898-vemkj46c1ntaqgc58sg5q3nr6pf6606h.apps.googleusercontent.com</string>
+	<string>998755357898-417a3v5v08c07a9v5do81u745cdgbvu7.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.998755357898-vemkj46c1ntaqgc58sg5q3nr6pf6606h</string>
+	<string>com.googleusercontent.apps.998755357898-417a3v5v08c07a9v5do81u745cdgbvu7</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAnvOCnf3NdLdocDGJ6-KV1bPdEiHAuuAQ</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>at.fhhoe.mc.VirtualLine-Admin</string>
+	<string>at.fhhoe.mc.VirtualLineAdmin</string>
 	<key>PROJECT_ID</key>
 	<string>virtualline-b59e4</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,7 +29,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:998755357898:ios:3544c9eaf107bf9deb1033</string>
+	<string>1:998755357898:ios:204f6e1d389a597beb1033</string>
 	<key>DATABASE_URL</key>
 	<string>https://virtualline-b59e4.firebaseio.com</string>
 </dict>
