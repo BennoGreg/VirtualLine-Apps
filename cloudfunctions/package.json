@@ -8,5 +8,11 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@google-cloud/firestore": "^3.8.0"
+  },
+  "dependencies": {
+    "firebase-admin": "^8.12.1"
+  }
 }
