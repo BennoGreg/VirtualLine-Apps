@@ -441,8 +441,9 @@
 			baseConfigurationReference = 073F36305FD03C5FAE70ECD5 /* Pods-VirtualLine Admin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2UJHZ7R572;
+				DEVELOPMENT_TEAM = 6KD26L2C7U;
 				INFOPLIST_FILE = "VirtualLine Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +451,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "at.fhhoe.mc.VirtualLine-Admin";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -460,8 +462,9 @@
 			baseConfigurationReference = 56A317E71487DBE89CF691D2 /* Pods-VirtualLine Admin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2UJHZ7R572;
+				DEVELOPMENT_TEAM = 6KD26L2C7U;
 				INFOPLIST_FILE = "VirtualLine Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -469,6 +472,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "at.fhhoe.mc.VirtualLine-Admin";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
