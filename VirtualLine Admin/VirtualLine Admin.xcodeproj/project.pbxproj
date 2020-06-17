@@ -18,7 +18,6 @@
 		855A6B8424825A07003C7A49 /* AddQueueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 855A6B8324825A07003C7A49 /* AddQueueViewController.swift */; };
 		8577446B24825A7F00F3C2B7 /* AddQueueViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8577446A24825A7F00F3C2B7 /* AddQueueViewController.storyboard */; };
 		85A7ABEE24855E45002684FF /* QueueData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85A7ABED24855E45002684FF /* QueueData.swift */; };
-		D3427B282460758600E5563F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3427B272460758600E5563F /* GoogleService-Info.plist */; };
 		D3A7B54C246072E500C0247C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7B54B246072E500C0247C /* AppDelegate.swift */; };
 		D3A7B54E246072E500C0247C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7B54D246072E500C0247C /* SceneDelegate.swift */; };
 		D3A7B550246072E500C0247C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3A7B54F246072E500C0247C /* ViewController.swift */; };
@@ -26,6 +25,8 @@
 		D3A7B556246072E500C0247C /* VirtualLine_Admin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D3A7B554246072E500C0247C /* VirtualLine_Admin.xcdatamodeld */; };
 		D3A7B558246072E700C0247C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A7B557246072E700C0247C /* Assets.xcassets */; };
 		D3A7B55B246072E700C0247C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A7B559246072E700C0247C /* LaunchScreen.storyboard */; };
+		D3DF13E62496840000869B07 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3DF13E52496840000869B07 /* Extensions.swift */; };
+		D3DF13E824968D8800869B07 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = D3DF13E724968D8800869B07 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,7 +43,6 @@
 		855A6B8324825A07003C7A49 /* AddQueueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQueueViewController.swift; sourceTree = "<group>"; };
 		8577446A24825A7F00F3C2B7 /* AddQueueViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddQueueViewController.storyboard; sourceTree = "<group>"; };
 		85A7ABED24855E45002684FF /* QueueData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QueueData.swift; sourceTree = "<group>"; };
-		D3427B272460758600E5563F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		D3A7B548246072E500C0247C /* VirtualLine Admin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VirtualLine Admin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A7B54B246072E500C0247C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D3A7B54D246072E500C0247C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -52,6 +52,9 @@
 		D3A7B557246072E700C0247C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3A7B55A246072E700C0247C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3A7B55C246072E700C0247C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3DF13E52496840000869B07 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D3DF13E724968D8800869B07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D3DF13EB2496A89D00869B07 /* VirtualLine Admin.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "VirtualLine Admin.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 		D3A7B54A246072E500C0247C /* VirtualLine Admin */ = {
 			isa = PBXGroup;
 			children = (
+				D3DF13EB2496A89D00869B07 /* VirtualLine Admin.entitlements */,
+				D3DF13E4249683EB00869B07 /* Extensions */,
 				855CE44D248043890094ED1C /* Dashboard */,
 				855A6B82248259D7003C7A49 /* New Queue */,
 				855301D92483FEAE0040CF7D /* Settings */,
@@ -150,13 +155,21 @@
 				85185BC024853DAD00539DA7 /* Server Communication */,
 				D3A7B54B246072E500C0247C /* AppDelegate.swift */,
 				D3A7B54D246072E500C0247C /* SceneDelegate.swift */,
-				D3427B272460758600E5563F /* GoogleService-Info.plist */,
 				D3A7B557246072E700C0247C /* Assets.xcassets */,
 				D3A7B559246072E700C0247C /* LaunchScreen.storyboard */,
 				D3A7B55C246072E700C0247C /* Info.plist */,
 				D3A7B554246072E500C0247C /* VirtualLine_Admin.xcdatamodeld */,
+				D3DF13E724968D8800869B07 /* GoogleService-Info.plist */,
 			);
 			path = "VirtualLine Admin";
+			sourceTree = "<group>";
+		};
+		D3DF13E4249683EB00869B07 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D3DF13E52496840000869B07 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		F4C57CE362E5C87601DB3C81 /* Frameworks */ = {
@@ -228,8 +241,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				855301E024840AB50040CF7D /* AdminSettingsViewController.storyboard in Resources */,
+				D3DF13E824968D8800869B07 /* GoogleService-Info.plist in Resources */,
 				D3A7B55B246072E700C0247C /* LaunchScreen.storyboard in Resources */,
-				D3427B282460758600E5563F /* GoogleService-Info.plist in Resources */,
 				D3A7B558246072E700C0247C /* Assets.xcassets in Resources */,
 				D3A7B553246072E500C0247C /* Main.storyboard in Resources */,
 				8577446B24825A7F00F3C2B7 /* AddQueueViewController.storyboard in Resources */,
@@ -293,6 +306,7 @@
 				855301DC2483FF570040CF7D /* TestData.swift in Sources */,
 				D3A7B54C246072E500C0247C /* AppDelegate.swift in Sources */,
 				85185BC224853E9C00539DA7 /* ServerCommunication.swift in Sources */,
+				D3DF13E62496840000869B07 /* Extensions.swift in Sources */,
 				855301E4248414990040CF7D /* SettingsSection.swift in Sources */,
 				85A7ABEE24855E45002684FF /* QueueData.swift in Sources */,
 				855301E2248414690040CF7D /* SettingsCell.swift in Sources */,
@@ -441,6 +455,7 @@
 			baseConfigurationReference = 073F36305FD03C5FAE70ECD5 /* Pods-VirtualLine Admin.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "VirtualLine Admin/VirtualLine Admin.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6KD26L2C7U;
@@ -449,7 +464,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "at.fhhoe.mc.VirtualLine-Admin";
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhhoe.mc.VirtualLineAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -462,6 +477,7 @@
 			baseConfigurationReference = 56A317E71487DBE89CF691D2 /* Pods-VirtualLine Admin.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = "VirtualLine Admin/VirtualLine Admin.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6KD26L2C7U;
@@ -470,7 +486,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "at.fhhoe.mc.VirtualLine-Admin";
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhhoe.mc.VirtualLineAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;

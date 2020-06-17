@@ -19,7 +19,7 @@ class AddQueueViewController: UIViewController{
         queueReminderTextfield.keyboardType = .numberPad
         queueAverageWaitingTimeTextfield.keyboardType = .numberPad
         // ready for receiving notification
-      
+        hideKeyboardWhenTappedAround()
 
     }
     

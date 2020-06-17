@@ -47,6 +47,7 @@ class ViewController: UIViewController {
                 print(error.localizedDescription)
             }else if let result = result{
                 self.token = result.token
+                
                 //print(result.token)
             }
         }
@@ -77,6 +78,7 @@ class ViewController: UIViewController {
         
         
         ref = db.collection("queue").addDocument(data: [
+            "CurrentNumber": 0
             "DeviceToken": token ?? "",
             "Name": "Queue4",
             "Reminder": 3,

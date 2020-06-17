@@ -5,7 +5,7 @@
 //  Created by Niklas Wagner on 01.06.20.
 //  Copyright © 2020 Benedikt. All rights reserved.
 //
-
+import Firebase
 import FirebaseCore
 import FirebaseFirestore
 import FirebaseFunctions
@@ -13,6 +13,7 @@ import FirebaseFunctions
 var db: Firestore!
 var ref: DocumentReference?
 var functions = Functions.functions()
+var token: String?
 
 var dataDictionary = [String: Any]()
 
@@ -24,6 +25,16 @@ func setUpFirebase(){
           Firestore.firestore().settings = settings
           // [END setup]
           db = Firestore.firestore()
+    
+    InstanceID.instanceID().instanceID { (result, error) in
+        if let error = error{
+            print(error.localizedDescription)
+        }else if let result = result{
+            token = result.token
+            //print(result.token)
+        }
+        
+    }
 
 }
 
@@ -32,10 +43,12 @@ func createQueue(queueName: String, averageTimeCustomer: String, minutesBeforeNo
     
     
     ref = db.collection("queue").addDocument(data: [
+                "CurrentNumber": 0,
                "Name": queueName,
                "Reminder": Int (minutesBeforeNotifyingCustomer),
                "TimePerCustomer": Int(averageTimeCustomer),
-               "UserQueue" : [DocumentReference]()
+               "UserQueue" : [DocumentReference](),
+               "DeviceToken": token ?? ""
            ]){error in
                if let error = error{
                    print("Error adding document: \(error)")
