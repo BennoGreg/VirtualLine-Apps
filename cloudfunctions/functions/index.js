@@ -68,7 +68,9 @@ app.post('/api/create', (req, res) => {
         return 0;
     });*/
 
-exports.queue = functions.firestore.document('queue/{queueID}').onUpdate((change,context) =>{
+
+
+exports.queue = functions.region('europe-west1').firestore.document('queue/{queueID}').onUpdate((change,context) =>{
 
     const newValue = change.after.data();
 
