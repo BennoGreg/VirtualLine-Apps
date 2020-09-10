@@ -54,7 +54,6 @@
 		D3A7B55C246072E700C0247C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D3DF13E52496840000869B07 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D3DF13E724968D8800869B07 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		D3DF13EB2496A89D00869B07 /* VirtualLine Admin.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; path = "VirtualLine Admin.entitlements"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,7 +145,6 @@
 		D3A7B54A246072E500C0247C /* VirtualLine Admin */ = {
 			isa = PBXGroup;
 			children = (
-				D3DF13EB2496A89D00869B07 /* VirtualLine Admin.entitlements */,
 				D3DF13E4249683EB00869B07 /* Extensions */,
 				855CE44D248043890094ED1C /* Dashboard */,
 				855A6B82248259D7003C7A49 /* New Queue */,
@@ -458,13 +456,13 @@
 				CODE_SIGN_ENTITLEMENTS = "VirtualLine Admin/VirtualLine Admin.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6KD26L2C7U;
+				DEVELOPMENT_TEAM = 6B3JGYZXYX;
 				INFOPLIST_FILE = "VirtualLine Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = at.fhhoe.mc.VirtualLineAdmin;
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhooe.mc.VirtualLineAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
@@ -480,13 +478,13 @@
 				CODE_SIGN_ENTITLEMENTS = "VirtualLine Admin/VirtualLine Admin.entitlements";
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 6KD26L2C7U;
+				DEVELOPMENT_TEAM = 6B3JGYZXYX;
 				INFOPLIST_FILE = "VirtualLine Admin/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = at.fhhoe.mc.VirtualLineAdmin;
+				PRODUCT_BUNDLE_IDENTIFIER = at.fhooe.mc.VirtualLineAdmin;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
