@@ -72,13 +72,13 @@ app.post('/api/create', (req, res) => {
 
 exports.queue = functions.region('europe-west1').firestore.document('queue/{queueID}').onUpdate((change,context) =>{
 
-    const newValue = change.after.data();
+    /*const newValue = change.after.data();
 
 
-    const users = newValue.UserQueue;
-    const token = newValue.DeviceToken;
+    const users = newValue.userQueue;
+    const token = newValue.deviceToken;
     const update = updateUser(users.slice(-1)[0], newValue, token, change.after.id);
-    const time = newValue.TimePerCustomer;
+    const time = newValue.timePerCustomer;
 
 
     //sendToAdmin(token,newValue, change.after.id);
@@ -87,18 +87,18 @@ exports.queue = functions.region('europe-west1').firestore.document('queue/{queu
         sendToUser(users[i], users, time);
     }
 
-    return 0;
+    return 0;*/
 
 });
 
 function updateUser(user, data, token,id) {
     return  user.update({
-        NumberInQueue: data.CurrentNumber
+        numberInQueue: data.currentNumber
     }).then(() => {
         let promises = [];
         for(i = 0; i<2; i++){
-            if (i===data.UserQueue.length) break;
-            let ref = data.UserQueue[i];
+            if (i===data.userQueue.length) break;
+            let ref = data.userQueue[i];
             const p = ref.get()
             promises.push(p);
         }
@@ -127,12 +127,12 @@ function sendToAdmin(token, data, userData, id){
     let firstUserName = "";
     let firstPosition = "0";
     if(!(userData[0] === undefined)){
-        firstUserName = userData[0].Name;
-        firstPosition = userData[0].NumberInQueue;
+        firstUserName = userData[0].name;
+        firstPosition = userData[0].numberInQueue;
     }
     let secondUserName = "";
     if (!(userData[1] === undefined)){
-        secondUserName = userData[1].Name;
+        secondUserName = userData[1].name;
     }
 
 
@@ -143,14 +143,13 @@ function sendToAdmin(token, data, userData, id){
                     category: "QUEUE_UPDATE",
                     alert: {
                         title: 'This is a message for the admin',
-                        body: 'This Queue contains ' + data.UserQueue.length + ' users in the queue!',
+                        body: 'This Queue contains ' + data.userQueue.length + ' users in the queue!',
                     },
-                    badge: 42,
                     sound: "bingbong.aiff",
                     contentAvailable: 1,
                 },
                 data: {
-                    customerCount: data.UserQueue.length,
+                    customerCount: data.userQueue.length,
                     first: firstUserName,
                     numberFirst: firstPosition,
                     second: secondUserName,
@@ -160,13 +159,6 @@ function sendToAdmin(token, data, userData, id){
         token: token,
     };
 
-
-    const sending = admin.messaging().send(message).then(function (response){
-        return console.log("Successfully sent message: ", response);
-    }).catch(function (error){
-        console.log(error);
-        throw new functions.https.HttpsError('unknown', error.message, error);
-    });
 }
 
 
@@ -178,7 +170,7 @@ function sendToUser(reference, users, time){
         const data = snapshot.data();
         //console.log("current User: ", snapshot.data());
 
-        token = data.DeviceToken;
+        token = data.deviceToken;
         let index = getIndex(users, reference);
         const count = users.length;
         const totalTime = count * time;
@@ -191,7 +183,6 @@ function sendToUser(reference, users, time){
                         alert: {
                             title: 'UserUpdate',
                         },
-                        badge: 42,
                         sound: "bingbong.aiff",
                         contentAvailable: 1,
                     },
@@ -237,45 +228,23 @@ function getUser(reference){
     })
 }
 
-exports.putReference = functions.https.onCall((data, context) => {
-
-    const queueID = data.id;
-    const reference = data.reference;
-
-    console.log(reference);
-    let docRef = admin.firestore().doc('user/'+reference);
-    console.log(docRef);
-    let queueRef = admin.firestore().collection('queue').doc(queueID);
-    return queueRef.get().then((snapshot) =>{
-        let data = snapshot.data();
-        let users = data.UserQueue;
-        if (!users.includes(data)){
-            return queueRef.update({
-                CurrentNumber: admin.firestore.FieldValue.increment(1),
-                UserQueue: admin.firestore.FieldValue.arrayUnion(docRef)
-            });
-        }
-        return 0;
-    }).then(() => {
-        console.log("New User added to queue");
-        return "Done successfully";
-    }).catch((error) => {
-        throw new functions.https.HttpsError('unknown', error.message, error);
-    })
-});
 
 
-exports.deleteReference = functions.https.onCall((data,context) =>{
+exports.deleteReference = functions.region('europe-west1').https.onCall((data,context) =>{
 
     const queueID = data.id;
     const userID = data.reference;
 
-    let docRef = admin.firestore().doc('user/'+userID);
+    let userRef = admin.firestore().doc('user/'+userID);
     console.log("QueueID: ", queueID, "UserID", userID);
     let lastNumber = 0;
     return admin.firestore().collection('queue').doc(queueID).update({
-        UserQueue: admin.firestore.FieldValue.arrayRemove(docRef)
+        userQueue: admin.firestore.FieldValue.arrayRemove(userRef)
     }).then(() => {
+        const update = userRef.update({
+            queueID: null,
+            numberInQueue: null
+        })
         console.log("User removed from queue");
         return "Done successfully";
     }).catch((error) => {
@@ -296,11 +265,11 @@ exports.fetchQueueData = functions.https.onCall((data, context) =>{
 
         console.log(snapshot.data());
         let data = snapshot.data();
-        let userqueue = data.UserQueue;
-        let count = data.UserQueue.length;
-        let totalTime = data.TimePerCustomer * count;
+        let userqueue = data.userQueue;
+        let count = data.userQueue.length;
+        let totalTime = data.timePerCustomer * count;
         let index = getIndex(userqueue,docRef);
-        return {TotalNumber: count, TotalTime: totalTime, CurrentIndex: index};
+        return {totalNumber: count, totalTime: totalTime, currentIndex: index};
 
     }).catch((error) => {
         console.log(error);
@@ -323,19 +292,19 @@ exports.fetchQueueDataForAdmin = functions.https.onCall((data, context) =>{
     let queueID = data.QueueID;
     let promise = admin.firestore().collection('queue').doc(queueID).get().then( (snapshot) =>{
         let data = snapshot.data();
-        const userQueue = data.UserQueue;
+        const userQueue = data.userQueue;
         return 0;
     })
 })
 
 function getDataForAdmin(user, data,  id){
     return  user.update({
-        NumberInQueue: data.CurrentNumber
+        numberInQueue: data.currentNumber
     }).then(() => {
         let promises = [];
         for(i = 0; i<2; i++){
-            if (i===data.UserQueue.length) break;
-            let ref = data.UserQueue[i];
+            if (i===data.userQueue.length) break;
+            let ref = data.userQueue[i];
             const p = ref.get()
             promises.push(p);
         }
@@ -358,8 +327,115 @@ function getDataForAdmin(user, data,  id){
 }
 
 
+exports.createUser = functions.region('europe-west1').auth.user().onCreate((user) =>{
+    const uid = user.uid
 
 
+    return admin.firestore().doc(`user/${uid}`).create({
+        phoneNumber: user.phoneNumber,
+        deviceToken: null,
+        queueID: null,
+        name: null,
+        pushEnabled: false,
+        numberInQueue: null
+    })
+
+})
+
+exports.putReference = functions.region('europe-west1').https.onCall((data, context) => {
+
+    const queueID = data.id;
+    const reference = data.reference;
+
+    let userRef = admin.firestore().doc('user/'+reference);
+    let queueRef = admin.firestore().collection('queue').doc(queueID);
+    return queueRef.get().then((snapshot) =>{
+        let data = snapshot.data();
+        let users = data.userQueue;
+        if (!users.includes(data)){
+            return queueRef.update({
+                currentNumber: admin.firestore.FieldValue.increment(1),
+                userQueue: admin.firestore.FieldValue.arrayUnion(userRef)
+            }).then((result) => {
+                return queueRef.get().then((snapshot) => {
+                    let queueData = snapshot.data();
+                    let position = queueData.userQueue.length;
+                    const promises = []
+                    promises.push(notifyAdmin(queueData))
+                    const update = userRef.update({
+                        queueID: queueRef,
+                        numberInQueue: position
+                    })
+                    promises.push(update)
+                    return Promise.all(promises)
+                }).then(() =>{
+                    console.log('Success')
+                }).catch((error) => {
+                    console.error(error)
+                })
+
+            })
+        }
+        else {
+            return 0
+        }
+    }).then(()=>{
+        return console.log("User successfully updated")
+    }).catch((error) => {
+        throw new functions.https.HttpsError('unknown', error.message, error);
+    })
+});
+
+function notifyAdmin(queueData) {
+    const queueLength = queueData.userQueue.length
+    const token = queueData.deviceToken
+
+
+    let message = {
+        apns: {
+            payload: {
+                aps: {
+                    category: "QUEUE_UPDATE",
+                    alert: {
+                        title: 'This is a message for the admin',
+                        body: 'This Queue contains ' + queueLength + ' users in the queue!',
+                    },
+                    sound: "bingbong.aiff",
+                    contentAvailable: 1,
+                },
+                data: {
+                    customerCount: queueLength,
+                }
+            },
+        },
+        token: token,
+    };
+
+    return sendMessage(message)
+}
+
+function sendMessage(message) {
+    return admin.messaging().send(message).then(function (response){
+        return console.log("Successfully sent message: ", response);
+    }).catch(function (error){
+        console.log(error);
+        throw new functions.https.HttpsError('unknown', error.message, error);
+    });
+}
+
+
+
+/*.then((result) => {
+    const queueDoc = queueRef.get()
+    console.log('QueueData afterwards:', queueDoc.data())
+    let queueData = queueDoc.data();
+    let position = queueData.userQueue.length;
+    console.log("New User added to queue");
+    return userRef.update({
+        queueID: queueRef,
+        numberInQueue: position
+    })
+})*/
 
 
 
